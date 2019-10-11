@@ -1,3 +1,4 @@
+import java.util.Stack;
 
 public class BSTNonRecursive<T> {
 
@@ -13,6 +14,7 @@ public class BSTNonRecursive<T> {
 		tree.insert(10);
 		tree.insert(14);
 		
+		//tree.printInorder(tree.root);
 		tree.printInorder(tree.root);
 	}
 	
@@ -46,14 +48,42 @@ public class BSTNonRecursive<T> {
 		}
 	}
 	
-	public void printInorder(Node<T> node) {
+	public void printInorderRecursive(Node<T> node) {
 		if (node == null) 
 			return;
-		printInorder(node.left);
+		printInorderRecursive(node.left);
 		System.out.println(node.data);
-		printInorder(node.right);
+		printInorderRecursive(node.right);
 	}
 
+	public void printInorder(Node<T> root) {
+		if (root == null)
+			return;
+		
+		Stack<T> stack = new Stack<>();
+		Node<T> current = root.right;
+		while(true) {
+			if (current == null) {
+				break;
+			}
+			stack.push(current.data);
+			current = current.right;
+		}
+		stack.push(root.data);
+		current = root.left;
+		while(true) {
+			if (current == null) {
+				break;
+			}
+			stack.push(current.data);
+			current = current.left;
+		}
+		
+		while (!stack.isEmpty())
+			System.out.println(stack.pop());
+		
+	}
+		
 	static class Node<T> {
 		T data;
 		Node<T> left;

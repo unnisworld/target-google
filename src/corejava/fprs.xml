@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><partData>
+	<partId id="1">
+		<firstname>Unni</firstname>
+		<lastname>kv</lastname>	
+		<dob>08061975</dob>
+	<place>Bangalore</place></partId>
+	<partId id="2">
+		<firstname>Malu</firstname>
+		<lastname>u</lastname>	
+		<dob>04102007</dob>
+	<place>Bangalore</place></partId>
+	<partId id="3">
+		<firstname>Kukku</firstname>
+		<lastname>u</lastname>	
+		<dob>01102012</dob>
+	<place>Bangalore</place></partId>
+<partId><firstname/><lastname/><dob>0</dob></partId><partId><firstname>Aparna</firstname><lastname>k</lastname><dob>8061980</dob></partId></partData>
